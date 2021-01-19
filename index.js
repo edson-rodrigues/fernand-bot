@@ -22,5 +22,12 @@ const dialogflowFulfillment = (request, response) =>{
     let intentMap = new Map()
     intentMap.set("Apresentacao", handlers.ApresentacaoHandler)
     intentMap.set("1 - Agendar Consulta", handlers.AgendarConsultaHandler)
+    intentMap.set("1 - Clínico Geral", handlers.AgendarClinicoGeralHandler)
+    intentMap.set("1 - Terça-Feira 10h - Clínico Geral", handlers.TercaClinicoGeralHandler)
+    intentMap.set("1 - Primeira Vez", handlers.PrimeiraVezHandler)
+    intentMap.set("Verificar Nome Paciente", handlers.VerificarNomePacienteHandler)
+    intentMap.set("Nome Paciente Correto", handlers.NomePacienteCorretoHandler)
+    intentMap.set("Confirmar Agendamento", handlers.ConfirmarAgendamentoHandler)
+
     agent.handleRequest(intentMap)
 }
