@@ -1,6 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const {WebhookClient} = require('dialogflow-fulfillment')
+const handlers = require('./handlers')
+
 const app = express()
 
 app.use(bodyParser.json())
@@ -17,12 +19,8 @@ app.listen(port, () => {
 
 const dialogflowFulfillment = (request, response) =>{
     const agent = new WebhookClient({request, response})
-
-    function sayHello(agent){
-        agent.add("Hi there, this response is coming from Edson")
-    }
-
     let intentMap = new Map()
-    intentMap.set("Apresentacao", sayHello)
+    intentMap.set("Apresentacao", handlers.ApresentacaoHandler)
+    intentMap.set("1 - Agendar Consulta", handlers.AgendarConsultaHandler)
     agent.handleRequest(intentMap)
 }
