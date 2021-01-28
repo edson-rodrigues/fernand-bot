@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer')
 
-let fromMail = 'edson.rodgon@gmail.com';
+let fromMail = 'fernanda-bot@saudebelem.com.br';
 let toMail = 'suporte.saudebelem@gmail.com';
 let subject = 'Agendamento Chatbot';
 
@@ -17,13 +17,23 @@ exports.text = (data) =>{
         )
 }
 
-exports.transporter = nodemailer.createTransport({
-    service: 'gmail',
+/*exports.transporter = nodemailer.createTransport({
+    service: '',
     auth: {
         user: fromMail ,
         pass: 'jonsnowistheking'
     }
-    });
+    });*/
+
+    exports.transporter = nodemailer.createTransport({
+        host: "mail.saudebelem.com.br",
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+          user: fromMail, // generated ethereal user
+          pass: '(FYR_wr)dXAX' // generated ethereal password
+        },
+      });
 
 // email options
 exports.mailOptions = {
