@@ -107,7 +107,7 @@ exports.ConfirmarAgendamentoHandler = function (agent){
      ` )
 }
 exports.FinalizaConversaHandler = function(agent){
-    agent.add("Sua solicitação de  agendamento foi realizada com sucesso! Em breve estaremos entrando\
+    agent.add("Sua solicitação de agendamento foi realizada com sucesso! Em breve estaremos entrando\
     em contato com você para confirmar o agendamento e passar instruções. A Clínica Saúde Belém agradece a sua preferência\
 , tenha um bom dia!")
     mailer.mailOptions.text = mailer.text(corpoEmail)
