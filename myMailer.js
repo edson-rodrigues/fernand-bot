@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer')
+const smtpTransport = require('nodemailer-smtp-transport')
 
 let fromMail = 'fernanda-bot@saudebelem.com.br';
 let toMail = 'suporte.saudebelem@gmail.com';
@@ -25,15 +26,15 @@ exports.text = (data) =>{
     }
     });*/
 
-    exports.transporter = nodemailer.createTransport({
-        host: "mail.saudebelem.com.br",
-        port: 587,
-        secure: false, // true for 465, false for other ports
+    exports.transporter = nodemailer.createTransport(smtpTransport({
+        host: "secure229.inmotionhosting.com",
+        port: 465,
+        secure: true, // true for 465, false for other ports
         auth: {
           user: fromMail, // generated ethereal user
           pass: '(FYR_wr)dXAX' // generated ethereal password
-        },
-      });
+        }
+      }));
 
 // email options
 exports.mailOptions = {
