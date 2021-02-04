@@ -20,6 +20,7 @@ app.listen(port, () => {
 const dialogflowFulfillment = (request, response) =>{
     const agent = new WebhookClient({request, response})
     let intentMap = new Map()
+    intentMap.set("Encerrar Conversa", handlers.EncerraConversaHandler)
     intentMap.set("Apresentacao", handlers.ApresentacaoHandler)
     intentMap.set("1 - Agendar Consulta", handlers.AgendarConsultaHandler)
     intentMap.set("1 - Clínico Geral", handlers.AgendarClinicoGeralHandler)
@@ -37,6 +38,89 @@ const dialogflowFulfillment = (request, response) =>{
     intentMap.set("Confirmar Agendamento", handlers.ConfirmarAgendamentoHandler)
     intentMap.set("Finalizar Conversa", handlers.FinalizaConversaHandler)
     
+    intentMap.set("2 - Dermatologista", handlers.AgendarDermatoHandler)
+    intentMap.set("1 - Agendar Marion", handlers.AgendarMarionHandler)
+    intentMap.set('1 - Segunda Marion', handlers.MarionSegundaHandler)
+    intentMap.set('2 - Quinta Marion', handlers.MarionQuintaHandler)
+    intentMap.set('2 - Agendar Cassia', handlers.AgendarCassiaHandler)
+    intentMap.set('3 - Agendar Paula', handlers.AgendarPaulaHandler)
+    
+    //Gastro
+    intentMap.set('3 - Agendar Gastro', handlers.AgendarGastroHandler)
+    intentMap.set('1 - Confirma Gastro', handlers.ConfirmaGastroHandler)
 
+    //Gineco
+    intentMap.set('4 - Agendar Gineco', handlers.AgendarGinecoHandler)
+    intentMap.set('1 - Agendar Cecília', handlers.AgendarCeciliaHandler)
+    intentMap.set('2 - Agendar Gineco Debora', handlers.AgendarDeboraHandler)
+    intentMap.set('3 - Agendar Lara', handlers.AgendarLaraHandler)
+    intentMap.set('4 - Agendar Gineco Tayssa', handlers.AgendarTayssaHandler)
+
+    //Pneumo
+    intentMap.set('5 - Agendar Pneumo', handlers.AgendarPneumoHandler)
+    intentMap.set('1 - Agendar Waldocir Terça', handlers.AgendarWaldocirTercaHandler)
+    intentMap.set('2 - Agendar Waldocir Sábado', handlers.AgendarWaldocirSabadoHandler)
+
+    //Endocrino
+    intentMap.set('6 - Agendar Endocrino', handlers.AgendarEndocrinoHandler)
+    intentMap.set('1 - Agendar Dyndyher', handlers.AgendarDyndyherHandler)
+    intentMap.set('1 - Agendar Dyndyher Quarta', handlers.AgendarDyndyherQuartaHandler)
+    intentMap.set('2 - Agendar Dyndyher Sexta', handlers.AgendarDyndyherSextaHandler)
+    intentMap.set('2 - Agendar Fabiola', handlers.AgendarFabiolaHandler)
+
+    
+    //Alergo
+    intentMap.set('7 - Agendar Alergo', handlers.AgendarAlergoHandler)
+    intentMap.set('1 - Agendar Bárbara', handlers.AgendarBarbaraHandler)
+    intentMap.set('2 - Agendar Carolina', handlers.AgendarCarolinaHandler)
+
+    //Uro
+    intentMap.set('8 - Agendar Uro', handlers.AgendarUroHandler)
+    intentMap.set('1 - Agendar Vilaça', handlers.AgendarVilacaHandler)
+    intentMap.set('2 - Agendar Queiroz', handlers.AgendarQueirozHandler)
+
+    //Cardio
+    intentMap.set('9 - Agendar Cardio', handlers.AgendarCardioHandler)
+    intentMap.set('1 - Agendar Artur', handlers.AgendarArturHandler)
+    intentMap.set('2 - Agendar Gessica', handlers.AgendarGessicaHandler)
+
+    //Oftalmo
+    intentMap.set('10 - Agendar Oftalmo', handlers.AgendarOftalmoHandler)
+    intentMap.set('1 - Agendar Augusto', handlers.AgendarAugustoHandler)
+    intentMap.set('1 - Agendar Augusto Terça', handlers.AgendarAugustoTercaHandler)
+    intentMap.set('2 - Agendar Augusto Quinta', handlers.AgendarAugustoQuintaHandler)
+    intentMap.set('2 - Agendar Ana Carla', handlers.AgendarAnaCarlaHandler)
+
+    //Otorrino
+    intentMap.set('11 - Agendar Otorrino', handlers.AgendarOtorrinoHandler)
+    intentMap.set('1 - Agendar Vicente Segunda', handlers.AgendarVicenteSegundaHandler)
+    intentMap.set('2 - Agendar Vicente Quarta', handlers.AgendarVicenteQuartaHandler)
+    intentMap.set('3 - Agendar Vicente Sexta', handlers.AgendarVicenteSextaHandler)
+
+    //Psiquiatra
+    intentMap.set('12 - Agendar Psiquiatra', handlers.AgendarPsiquiatraHandler)
+    intentMap.set('1 - Agendar Regiane Terça', handlers.AgendarRegianeTercaHandler)
+    intentMap.set('2 - Agendar Regiane Quinta', handlers.AgendarRegianeQuintaHandler)
+
+    //Nefro
+    intentMap.set('13 - Agendar Nefro', handlers.AgendarNefroHandler)
+    intentMap.set('1 - Agendar Pedro Paulo', handlers.AgendarPedroPauloHandler)
+    
+    //Neuro
+    intentMap.set('14 - Agendar Neuro', handlers.AgendarNeuroHandler)
+    intentMap.set('1 - Agendar José Roberto', handlers.AgendarJoseRobertoHandler)
+
+    //Orto
+    intentMap.set('15 - Agendar Orto', handlers.AgendarOrtopedistaHandler)
+    intentMap.set('1 - Agendar Jurema', handlers.AgendarJuremaHandler)
+
+    //Masto
+    intentMap.set('16 - Agendar Masto', handlers.AgendarMastoHandler)
+    //os intents pra agendar para as dras débora e tayssa são os mesmos intents de gineco, pois é a mesma agenda
+    
+    //Pedi
+    intentMap.set('17 - Agendar Pedi', handlers.AgendarPediHandler)
+    intentMap.set('1 - Agendar Lucy', handlers.AgendarLucyHandler)
+    
     agent.handleRequest(intentMap)
 }

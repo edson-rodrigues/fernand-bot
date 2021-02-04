@@ -1,0 +1,114 @@
+{
+   "medicos":
+    [   
+        {   
+            "medico": "Dr. Igor Mizael",
+            "horarios": ["Terça-Feira à partir das 8h","Quinta-Feira à partir das 7:30h"]
+        },
+        {   
+            "medico": "Dra. Marion Drago",
+            "horarios": ["Segunda-Feira à partir das 14:30h", "Quinta-Feira à partir das 8:30h"]
+        },
+        {   
+            "medico": "Dra. Cassia Camarinha",
+            "horarios": ["Terça-Feira à partir das 14h"]
+        },
+        {
+            "medico":"Dra. Paula Cerqueira",
+            "horarios": ["O Agendamento com esta profissional é feito com hora marcada pela secretária da mesma, no número: "]
+        },
+        {
+            "medico": "Dr. Allan Rodrigues",
+            "horarios": ["Segunda-Feira, à partir das 14h"]
+        },
+        {
+            "medico": "Dra. Cecília Pinho",
+            "horarios": ["Terça-Feira à partir das 14h"]
+        },
+        {
+            "medico": "Dra. Debora Queiroz",
+            "horarios": ["Terça-Feira à partir das 9:30h"]
+        },
+        {
+            "medico": "Dra. Lara Orlandini",
+            "horarios": ["Quarta-Feira à partir das 14h"]
+        },
+        {
+            "medico": "Dra. Tayssa Guimarães",
+            "horarios": ["Quarta-Feira à partir das 8:30h"]
+        },
+        {
+            "medico": "Dr. Waldocir Santa Rosa",
+            "horarios": ["Terça-Feira a partir das 14h", "Sábado a partir das 8h"]
+        },
+        {
+            "medico": "Dyndyher de Sá",
+            "horarios": ["Quarta-Feira à partir das 14h", "Sexta-Feira a partir das 8h"]
+        },
+        {
+            "medico": "Fabíola Bastos",
+            "horarios": ["Sexta-Feira a partir das 10h"]
+        },
+        {
+            "medico": "Dra. Bárbara Teixeira",
+            "horarios": ["Quinta-Feira a partir das 14h"]
+        },
+        {
+            "medico": "Dra. Carolina Tavares",
+            "horarios":["Segunda-Feira à partir das 8h"]
+        },
+        {
+            "medico": "Marcus Vilaça",
+            "horarios": ["Quarta-Feira à partir das 10h"]
+        },
+        {
+            "medico": "Marcus Vinicius",
+            "horarios": ["Quinta-Feira à partir das 15h"]
+        },
+        {
+            "medico": "Dr. Artur Batista",
+            "horarios":["Quarta-Feira à partir das 15h"]
+        },
+        {
+            "medico": "Dra. Gessica Pinheiro",
+            "horarios":["Terça-Feira à partir das 9h"]
+        },
+        {
+            "medico":"Artur Batista",
+            "horarios":["Quarta-Feira à partir das 15h"]
+        },
+        {
+            "medico":"Gessica Pinheiro",
+            "horarios":["Terça-Feira à partir das 9h"]
+        },
+        {
+            "medico":"Dr. Augusto Almeida",
+            "horarios":["Terça-Feira a partir das 14:30h", "Quinta-Feira a partir das 14:30h"]
+        },
+        {
+            "medico":"Dra. Ana Clara",
+            "horarios":["Quarta-Feira à partir das 8h"]
+        },
+        {
+            "medico":"Vicente de Paula",
+            "horarios":["Segunda", "Quarta", "Sexta"]
+        },
+        {
+            "medico":"Dra. Regiane Farias",
+            "horarios":["Terça", "Quinta"]
+        },
+        {
+            "medico":"Dr. Pedro Paulo",
+            "horarios":["Quarta-Feira à partir das 9h"]
+        },
+        {
+            "medico":"Dr. José Roberto",
+            "horarios":["Segunda-Feira à partir das 8h"]
+        },
+        {
+            "medico":"Dra. Jurema Miguins",
+            "horarios":["Terça-Feira a partir das 10h"]
+        }
+
+    ]
+}
