@@ -248,7 +248,7 @@ exports.AgendarWaldocirSabadoHandler = function(agent){
 //ENDOCRINO
 exports.AgendarEndocrinoHandler = function(agent){
     agent.add(`
-    O preço da consulta nessa especialidade é R$ 140,00 para crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 110,00. Na especialidade de Endocrinologista, temos a Dra. Dyndyher de Sá\
+    O preço da consulta nessa especialidade é R$ 140,00 para crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 110,00. Na especialidade de Endocrinologista, temos a Dra. Dyndyher de Sá, \
 que atende na ${agendaMedicos.medicos[10].horarios[0]} e na ${agendaMedicos.medicos[10].horarios[1]}
 e a Dra. Fabíola Bastos que atende na ${agendaMedicos.medicos[11].horarios[0]}\n
 Por favor, responda com o número correspondente a opção que deseja:
@@ -272,7 +272,7 @@ exports.AgendarDyndyherSextaHandler = function(agent){
     corpoEmail.diaHora = agendaMedicos.medicos[10].horarios[1]
 }
 exports.AgendarFabiolaHandler = function(agent){
-    agent.add(verificarSePrimeiraVez)
+    agent.add(verificarSePrimeiraVez())
     corpoEmail.medico = "Dra. Fabiola"
     corpoEmail.diaHora = agendaMedicos.medicos[11].horarios[0]
 }
