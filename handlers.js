@@ -51,7 +51,8 @@ exports.AgendarConsultaHandler = function(agent){
 
 exports.AgendarClinicoGeralHandler = function(agent){
     agent.add(`Certo, na especialidade de *Clínico Geral*, temos o Dr. *Igor Mizael*, que atende na
-    *Terça-Feira à partir das 8h* e na *Quinta-Feira à partir das 7:30h* Em qual dia desejas agendar?
+    *Terça-Feira à partir das 8h* e na *Quinta-Feira à partir das 7:30h* O preço da consulta é
+    R$ 105,00 no cartão de débito ou crédito em até 3x, com desconto para pagamento em dinheiro, fica R$ 80,00. Em qual dia desejas agendar?
     \n1 - Terça-Feira, à partir das 8h
     \n2 - Quinta-Feira, à partir das 7:30h`)
     corpoEmail.especialidade = "Clínico Geral"
@@ -141,7 +142,7 @@ exports.FinalizaConversaHandler = function(agent){
 }
 //AGENDAMENTOS DERMATO
 exports.AgendarDermatoHandler = function(agent){
-    agent.add(`Certo. Na especialidade de dermatologista, contamos com as seguintes profissionais:
+    agent.add(`Certo. O preço da consulta é R$ 140,00 em no cartão de crédito em até 3x ou débito. Para pagamento em dinheiro, há desconto, ficando em R$ 110,00 Na especialidade de dermatologista, contamos com as seguintes profissionais:
     1 - Dra. Marion Drago. Que atende na ${agendaMedicos.medicos[1].horarios[0]} e na ${agendaMedicos.medicos[1].horarios[1]}. Somente particular.
     2 - Dra. Cassia Camarinha. Que atende na ${agendaMedicos.medicos[2].horarios[0]}. Somente particular.
     3 - Dra. Paula Cerqueira. Que atende de segunda-feira à sábado com hora marcada. *Profissional recomendado para procedimentos estéticos*
@@ -176,7 +177,7 @@ exports.AgendarPaulaHandler = function(agent){
 
 //GASTRO
 exports.AgendarGastroHandler = function(agent){
-    agent.add(`Na especialidade de Gastroenterologista, temos o Dr. Allan Rodrigues. Que atende na ${agendaMedicos.medicos[4].horarios[0]}. Gostaria de Agendar?
+    agent.add(`Na especialidade de Gastroenterologista, temos o Dr. Allan Rodrigues. Que atende na ${agendaMedicos.medicos[4].horarios[0]}. O preço da consulta é R$ 125,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto e o valor fica R$ 100,00. Gostaria de Agendar?
     1 - Agendar
     2 - Cancelar`)
 }
@@ -190,7 +191,9 @@ exports.ConfirmaGastroHandler = function(agent){
 
 //GINECO
 exports.AgendarGinecoHandler = function(agent){
-    agent.add(`Certo, na especialidade de Ginecologista, temos:\n
+    agent.add(`
+    O preço da consulta é R$ 125,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00
+    Certo, na especialidade de Ginecologista, temos:\n
     1 - Dra. Cecília Pinho, que atende na ${agendaMedicos.medicos[5].horarios[0]}\n
     2 - Dra. Debora Queiroz, que atende na ${agendaMedicos.medicos[6].horarios[0]}\n
     3 - Dra. Lara Orlandini, que atende na ${agendaMedicos.medicos[7].horarios[0]}\n
@@ -225,7 +228,9 @@ exports.AgendarTayssaHandler = function(agent){
 
 //PNEUMO
 exports.AgendarPneumoHandler = function(agent){
-    agent.add(`Certo. Na especialidade de Pneumologista, Temos o Dr. Waldocir Santa Rosa. Por favor, responda\
+    agent.add(`
+    O preço da consulta nessa especialidade é R$ 180,00 no cartão de crédito em até 3x, ou débito. Pagamento em dinheiro há desconto, ficando no valor de R$ 140,00.
+    Na especialidade de Pneumologista, Temos o Dr. Waldocir Santa Rosa. Por favor, responda\
     com o número correspondente ao dia que deseja agendar.
     1 - ${agendaMedicos.medicos[9].horarios[0]}
     2 - ${agendaMedicos.medicos[9].horarios[1]}`)
@@ -242,7 +247,8 @@ exports.AgendarWaldocirSabadoHandler = function(agent){
 }
 //ENDOCRINO
 exports.AgendarEndocrinoHandler = function(agent){
-    agent.add(`Certo. Na especialidade de Endocrinologista, temos a Dra. Dyndyher de Sá\
+    agent.add(`
+    O preço da consulta nessa especialidade é R$ 140,00 para crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 110,00. Na especialidade de Endocrinologista, temos a Dra. Dyndyher de Sá\
 que atende na ${agendaMedicos.medicos[10].horarios[0]} e na ${agendaMedicos.medicos[10].horarios[1]}
 e a Dra. Fabíola Bastos que atende na ${agendaMedicos.medicos[11].horarios[0]}\n
 Por favor, responda com o número correspondente a opção que deseja:
@@ -273,7 +279,9 @@ exports.AgendarFabiolaHandler = function(agent){
 
 //ALERGO
 exports.AgendarAlergoHandler = function(agent){
-    agent.add(`Na especialidade de Alergista/Alergologista temos a Dra. Bárbara Teixeira, que atende na
+    agent.add(`
+    O preço da consulta nessa especialidade é de R$ 140,00 no crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 110,00.
+    Na especialidade de Alergista/Alergologista temos a Dra. Bárbara Teixeira, que atende na
     ${agendaMedicos.medicos[12].horarios[0]} e a Dra. Carolina Tavares, que atende na ${agendaMedicos.medicos[13].horarios[0]}
     \nPor favor, responda com o número correspondente a opção desejada:\n
     1 - Dra. Bárbara Teixeira\n
@@ -292,7 +300,9 @@ exports.AgendarCarolinaHandler = function(agent){
 }
 //URO
 exports.AgendarUroHandler = function(agent){
-    agent.add(`Na especialidade de Urologia, temos o Dr. Marcus Vilaça, que atende na ${agendaMedicos.medicos[14].horarios[0]}
+    agent.add(`
+    O preço da consulta nessa especialidade é R$ 125,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00.
+    Na especialidade de Urologia, temos o Dr. Marcus Vilaça, que atende na ${agendaMedicos.medicos[14].horarios[0]}
     e o Dr. Marcus Queiroz, que atende na ${agendaMedicos.medicos[15].horarios[0]}\n
     por favor, responda com o número correspondente a opção desejada:\n
     1 - Dr. Marcus Vilaça\n
@@ -312,7 +322,9 @@ exports.AgendarQueirozHandler = function(agent){
 
 //CARDIO
 exports.AgendarCardioHandler = function(agent){
-    agent.add(`Na especialidade de cardiologista, temos o Dr. Artur Batista, que atende na ${agendaMedicos.medicos[16].horarios[0]} e a Dra. Gessica Pinheiro, que atende na ${agendaMedicos.medicos[17].horarios[0]}`)
+    agent.add(`
+    Nessa especialidade, o valor da consulta é R$ 125,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00
+    Na especialidade de cardiologista, temos o Dr. Artur Batista, que atende na ${agendaMedicos.medicos[16].horarios[0]} e a Dra. Gessica Pinheiro, que atende na ${agendaMedicos.medicos[17].horarios[0]}`)
     corpoEmail.especialidade = "Cardiologista"
 }
 exports.AgendarArturHandler = function(agent){
@@ -330,7 +342,9 @@ exports.AgendarGessicaHandler = function(agent){
 
 //OFTALMO
 exports.AgendarOftalmoHandler = function(agent){
-    agent.add(`Na especialidade de oftalmologista, temos o Dr. Augusto Almeida, que atende na ${agendaMedicos.medicos[18].horarios[0]} e na ${agendaMedicos.medicos[18].horarios[1]}, e a Dra. Ana Carla, que atende na ${agendaMedicos.medicos[19].horarios[0]}\
+    agent.add(`
+    O preço da consulta nessa especialidade é de R$ 140,00 no crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 110,00.
+    Na especialidade de oftalmologista, temos o Dr. Augusto Almeida, que atende na ${agendaMedicos.medicos[18].horarios[0]} e na ${agendaMedicos.medicos[18].horarios[1]}, e a Dra. Ana Carla, que atende na ${agendaMedicos.medicos[19].horarios[0]}\
     Por favor, responda com o número correspondente a opção desejada:\n
     1 - Agendar Dr. Augusto\n
     2 - Agendar Dra. Ana Carla`)
@@ -357,7 +371,9 @@ exports.AgendarAnaCarlaHandler = function(agent){
 }
 //OTORRINO
 exports.AgendarOtorrinoHandler = function(agent){
-    agent.add(`Na especialidade de Otorrinolaringologista, temos o Dr. Vicente de Paula, que atende ${agendaMedicos.medicos[20].horarios[0]}, ${agendaMedicos.medicos[20].horarios[1]} e ${agendaMedicos.medicos[20].horarios[1]} a partir das 10:30h
+    agent.add(`
+    O preço da consulta nessa especialidade é R$ 125,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00.
+    Na especialidade de Otorrinolaringologista, temos o Dr. Vicente de Paula, que atende ${agendaMedicos.medicos[20].horarios[0]}, ${agendaMedicos.medicos[20].horarios[1]} e ${agendaMedicos.medicos[20].horarios[1]} a partir das 10:30h
     Por favor, responda com o número correspondente ao dia que deseja se consultar:
     \n1 - ${agendaMedicos.medicos[20].horarios[0]}
     \n2 - ${agendaMedicos.medicos[20].horarios[1]}
@@ -380,7 +396,9 @@ exports.AgendarVicenteSextaHandler = function(agent){
 
 //PSIQUIATRA
 exports.AgendarPsiquiatraHandler = function(agent){
-    agent.add(`Na especialidade de Psiquiatra, temos a Dra. Regiane Farias, que atende na ${agendaMedicos.medicos[21].horarios[0]} e na ${agendaMedicos.medicos[21].horarios[1]}
+    agent.add(`
+    O preço da consulta nessa especialidade é R$300,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 250,00.
+    Na especialidade de Psiquiatra, temos a Dra. Regiane Farias, que atende na ${agendaMedicos.medicos[21].horarios[0]} e na ${agendaMedicos.medicos[21].horarios[1]}
     à partir das 10:30h. Responda com o número correspondente a data que deseja agendar:
     1 - ${agendaMedicos.medicos[21].horarios[0]}
     2 - ${agendaMedicos.medicos[21].horarios[1]}`)
@@ -397,7 +415,9 @@ exports.AgendarRegianeQuintaHandler = function(agent){
 }
 //NEFRO
 exports.AgendarNefroHandler = function(agent){
-    agent.add(`Na especialidade de Nefrologista, temos o Dr. Pedro Paulo, que atende na ${agendaMedicos.medicos[22].horarios[0]}.
+    agent.add(`
+    O preço da consulta nessa especialidade é R$ 140,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 110,00.
+    Na especialidade de Nefrologista, temos o Dr. Pedro Paulo, que atende na ${agendaMedicos.medicos[22].horarios[0]}.
     Gostaria de Agendar?
     1 - Sim
     2 - Cancelar
@@ -425,7 +445,9 @@ exports.AgendarJoseRobertoHandler = function(agent){
 }
 //ORTO
 exports.AgendarOrtopedistaHandler = function(agent){
-    agent.add(`Na especialidade de Ortopedista, temos a Dra. Jurema Miguins, que atende na ${agendaMedicos.medicos[24].horarios[0]}.
+    agent.add(`
+    O preço da consulta nessa especialidade é de R$ 125,00 em até 3x no cartão de crédito, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00.
+    Na especialidade de Ortopedista, temos a Dra. Jurema Miguins, que atende na ${agendaMedicos.medicos[24].horarios[0]}.
     Gostaria de agendar? Responda com o número correspondente a opção desejada.
     1 - Agendar
     2 - Cancelar`)
@@ -438,7 +460,9 @@ exports.AgendarJuremaHandler = function(agent){
 }
 //MASTO
 exports.AgendarMastoHandler = function(agent){
-    agent.add(`Na especialidade de Mastologista, temos a Dra. Débora que atende na ${agendaMedicos.medicos[6].horarios[0]}
+    agent.add(`
+    O preço da consulta nessa especialidade é de R$ 140,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando em R$ 110,00.
+    Na especialidade de Mastologista, temos a Dra. Débora que atende na ${agendaMedicos.medicos[6].horarios[0]}
     e a Dra. Tayssa que atende na ${agendaMedicos.medicos[8].horarios[0]}. Por favor responda com o número correspondente a oção desejada:
     1 - Agendar Dra. Débora
     2 - Agendar Dra. Tayssa`)
@@ -446,7 +470,9 @@ exports.AgendarMastoHandler = function(agent){
 }
 //PEDI
 exports.AgendarPediHandler = function(agent){
-    agent.add(`Na especialidade de Pediatria, temos a Dra. Lucy Anne, que atende na ${agendaMedicos.medicos[25].horarios[0]}. Deseja agendar?
+    agent.add(`
+    O preço da consulta é R$ 125,00 em até 3x no cartão de crédito, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00.
+    Na especialidade de Pediatria, temos a Dra. Lucy Anne, que atende na ${agendaMedicos.medicos[25].horarios[0]}. Deseja agendar?
     Responda com o número correspodente a opção desejada.
     1 - Agendar
     2 - Cancelar`)
