@@ -367,57 +367,57 @@ exports.AgendarAugustoQuintaHandler = function(agent){
 exports.AgendarAnaCarlaHandler = function(agent){
     agent.add(verificarSePrimeiraVez())
     corpoEmail.medico = "Ana Carla"
-    corpoEmail.diaHora = agendaMedicos.medicos[18].horarios[0]
+    corpoEmail.diaHora = agendaMedicos.medicos[19].horarios[0]
 }
 //OTORRINO
 exports.AgendarOtorrinoHandler = function(agent){
     agent.add(`
     O preço da consulta nessa especialidade é R$ 125,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00.
-    Na especialidade de Otorrinolaringologista, temos o Dr. Vicente de Paula, que atende ${agendaMedicos.medicos[22].horarios[0]}, ${agendaMedicos.medicos[22].horarios[1]} e ${agendaMedicos.medicos[22].horarios[1]} a partir das 10:30h
+    Na especialidade de Otorrinolaringologista, temos o Dr. Vicente de Paula, que atende ${agendaMedicos.medicos[20].horarios[0]}, ${agendaMedicos.medicos[20].horarios[1]} e ${agendaMedicos.medicos[20].horarios[1]} a partir das 10:30h
     Por favor, responda com o número correspondente ao dia que deseja se consultar:
-    \n1 - ${agendaMedicos.medicos[22].horarios[0]}
-    \n2 - ${agendaMedicos.medicos[22].horarios[1]}
-    \n3 - ${agendaMedicos.medicos[22].horarios[2]}`)
+    \n1 - ${agendaMedicos.medicos[20].horarios[0]}
+    \n2 - ${agendaMedicos.medicos[20].horarios[1]}
+    \n3 - ${agendaMedicos.medicos[20].horarios[2]}`)
     corpoEmail.especialidade = "Otorrinolaringologista"
     corpoEmail.medico = "Dr. Vicente de Paula"
 }
 exports.AgendarVicenteSegundaHandler = function(agent){
     agent.add(verificarSePrimeiraVez())
-    corpoEmail.diaHora = agendaMedicos.medicos[22].horarios[0]
+    corpoEmail.diaHora = agendaMedicos.medicos[20].horarios[0]
 }
 exports.AgendarVicenteQuartaHandler = function(agent){
     agent.add(verificarSePrimeiraVez())
-    corpoEmail.diaHora = agendaMedicos.medicos[22].horarios[1]
+    corpoEmail.diaHora = agendaMedicos.medicos[20].horarios[1]
 }
 exports.AgendarVicenteSextaHandler = function(agent){
     agent.add(verificarSePrimeiraVez())
-    corpoEmail.diaHora = agendaMedicos.medicos[22].horarios[2]
+    corpoEmail.diaHora = agendaMedicos.medicos[20].horarios[2]
 }
 
 //PSIQUIATRA
 exports.AgendarPsiquiatraHandler = function(agent){
     agent.add(`
     O preço da consulta nessa especialidade é R$300,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 250,00.
-    Na especialidade de Psiquiatra, temos a Dra. Regiane Farias, que atende na ${agendaMedicos.medicos[23].horarios[0]} e na ${agendaMedicos.medicos[23].horarios[1]}
+    Na especialidade de Psiquiatra, temos a Dra. Regiane Farias, que atende na ${agendaMedicos.medicos[21].horarios[0]} e na ${agendaMedicos.medicos[21].horarios[1]}
     à partir das 10:30h. Responda com o número correspondente a data que deseja agendar:
-    1 - ${agendaMedicos.medicos[23].horarios[0]}
-    2 - ${agendaMedicos.medicos[23].horarios[1]}`)
+    1 - ${agendaMedicos.medicos[21].horarios[0]}
+    2 - ${agendaMedicos.medicos[21].horarios[1]}`)
     corpoEmail.especialidade = 'Psiquiatra'
     corpoEmail.medico = "Regiane Farias"
 }
 exports.AgendarRegianeTercaHandler = function(agent){
     agent.add(verificarSePrimeiraVez())
-    corpoEmail.diaHora = agendaMedicos.medicos[23].horarios[0]
+    corpoEmail.diaHora = agendaMedicos.medicos[21].horarios[0]
 }
 exports.AgendarRegianeQuintaHandler = function(agent){
     agent.add(verificarSePrimeiraVez())
-    corpoEmail.diaHora = agendaMedicos.medicos[23].horarios[1]
+    corpoEmail.diaHora = agendaMedicos.medicos[21].horarios[1]
 }
 //NEFRO
 exports.AgendarNefroHandler = function(agent){
     agent.add(`
     O preço da consulta nessa especialidade é R$ 140,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 110,00.
-    Na especialidade de Nefrologista, temos o Dr. Pedro Paulo, que atende na ${agendaMedicos.medicos[24].horarios[0]}.
+    Na especialidade de Nefrologista, temos o Dr. Pedro Paulo, que atende na ${agendaMedicos.medicos[22].horarios[0]}.
     Gostaria de Agendar?
     1 - Sim
     2 - Cancelar
@@ -428,11 +428,11 @@ exports.AgendarPedroPauloHandler = function(agent){
     agent.add(verificarSePrimeiraVez())
     corpoEmail.especialidade = "Nefrologista"
     corpoEmail.medico = "Dr. Pedro Paulo"
-    corpoEmail.diaHora = agendaMedicos.medicos[24].horarios[0]
+    corpoEmail.diaHora = agendaMedicos.medicos[22].horarios[0]
 }
 //NEURO
 exports.AgendarNeuroHandler = function(agent){
-    agent.add(`Na especialidade de Neurologista, temos o Dr. José Roberto, que atende na ${agendaMedicos.medicos[25].horarios[0]}
+    agent.add(`Na especialidade de Neurologista, temos o Dr. José Roberto, que atende na ${agendaMedicos.medicos[23].horarios[0]}
     Deseja agendar? Responda com o número correspondente a opção desejada.
     1 - Agendar
     2 - Cancelar`)
@@ -441,13 +441,13 @@ exports.AgendarJoseRobertoHandler = function(agent){
     agent.add(verificarSePrimeiraVez())
     corpoEmail.especialidade = "Neurologista"
     corpoEmail.medico = "Dr. José Roberto"
-    corpoEmail.diaHora = agendaMedicos.medicos[25].horarios[0]
+    corpoEmail.diaHora = agendaMedicos.medicos[23].horarios[0]
 }
 //ORTO
 exports.AgendarOrtopedistaHandler = function(agent){
     agent.add(`
     O preço da consulta nessa especialidade é de R$ 125,00 em até 3x no cartão de crédito, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00.
-    Na especialidade de Ortopedista, temos a Dra. Jurema Miguins, que atende na ${agendaMedicos.medicos[26].horarios[0]}.
+    Na especialidade de Ortopedista, temos a Dra. Jurema Miguins, que atende na ${agendaMedicos.medicos[24].horarios[0]}.
     Gostaria de agendar? Responda com o número correspondente a opção desejada.
     1 - Agendar
     2 - Cancelar`)
@@ -456,7 +456,7 @@ exports.AgendarJuremaHandler = function(agent){
     agent.add(verificarSePrimeiraVez())
     corpoEmail.especialidade = "Ortopedista"
     corpoEmail.medico = "Dra. Jurema Miguins"
-    corpoEmail.diaHora = agendaMedicos.medicos[26].horarios[0]
+    corpoEmail.diaHora = agendaMedicos.medicos[24].horarios[0]
 }
 //MASTO
 exports.AgendarMastoHandler = function(agent){
@@ -472,7 +472,7 @@ exports.AgendarMastoHandler = function(agent){
 exports.AgendarPediHandler = function(agent){
     agent.add(`
     O preço da consulta é R$ 125,00 em até 3x no cartão de crédito, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00.
-    Na especialidade de Pediatria, temos a Dra. Lucy Anne, que atende na ${agendaMedicos.medicos[27].horarios[0]}. Deseja agendar?
+    Na especialidade de Pediatria, temos a Dra. Lucy Anne, que atende na ${agendaMedicos.medicos[25].horarios[0]}. Deseja agendar?
     Responda com o número correspodente a opção desejada.
     1 - Agendar
     2 - Cancelar`)
@@ -481,7 +481,7 @@ exports.AgendarPediHandler = function(agent){
 exports.AgendarLucyHandler = function(agent){
     agent.add(verificarSePrimeiraVez())
     corpoEmail.medico = "Dra. Lucy Anne"
-    corpoEmail.diaHora = agendaMedicos.medicos[27].horarios[0]
+    corpoEmail.diaHora = agendaMedicos.medicos[25].horarios[0]
 }
 
 

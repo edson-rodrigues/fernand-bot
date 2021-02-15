@@ -19,7 +19,7 @@
         {
             "id": 3,
             "medico":"Dra. Paula Cerqueira",
-            "horarios": ["O Agendamento com esta profissional é feito com hora marcada pela secretária da mesma, no número: "]
+            "horarios": ["O Agendamento com esta profissional é feito com hora marcada pela secretária da mesma, no número: 91992921121"]
         },
         {
             "id": 4,
@@ -93,51 +93,41 @@
         },
         {
             "id": 18,
-            "medico":"Artur Batista",
-            "horarios":["Quarta-Feira à partir das 15h"]
-        },
-        {   
-            "id": 19,
-            "medico":"Gessica Pinheiro",
-            "horarios":["Terça-Feira à partir das 9h"]
-        },
-        {
-            "id": 20,
             "medico":"Dr. Augusto Almeida",
             "horarios":["Terça-Feira a partir das 14:30h", "Quinta-Feira a partir das 14:30h"]
         },
         {
-            "id": 21,
+            "id": 19,
             "medico":"Dra. Ana Clara",
             "horarios":["Quarta-Feira à partir das 8h"]
         },
         {
-            "id": 22,
+            "id": 20,
             "medico":"Vicente de Paula",
             "horarios":["Segunda", "Quarta", "Sexta"]
         },
         {
-            "id": 23,
+            "id": 21,
             "medico":"Dra. Regiane Farias",
             "horarios":["Terça", "Quinta"]
         },
         {
-            "id": 24,
+            "id": 22,
             "medico":"Dr. Pedro Paulo",
             "horarios":["Quarta-Feira à partir das 9h"]
         },
         {
-            "id": 25,
+            "id": 23,
             "medico":"Dr. José Roberto",
             "horarios":["Segunda-Feira à partir das 8h"]
         },
         {
-            "id": 26,
+            "id": 24,
             "medico":"Dra. Jurema Miguins",
             "horarios":["Terça-Feira a partir das 10h"]
         },
         {
-            "id": 27,
+            "id": 25,
             "medico":"Dra. Lucy Anne",
             "horarios":["Segunda-Feira a partir das 15:30h"]
         }
