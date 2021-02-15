@@ -417,7 +417,7 @@ exports.AgendarRegianeQuintaHandler = function(agent){
 exports.AgendarNefroHandler = function(agent){
     agent.add(`
     O preço da consulta nessa especialidade é R$ 140,00 no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 110,00.
-    Na especialidade de Nefrologista, temos o Dr. Pedro Paulo, que atende na ${agendaMedicos.medicos[22].horarios[0]}.
+    Na especialidade de Nefrologista, temos o Dr. Pedro Paulo, que atende na ${agendaMedicos.medicos[21].horarios[0]}.
     Gostaria de Agendar?
     1 - Sim
     2 - Cancelar
@@ -432,7 +432,7 @@ exports.AgendarPedroPauloHandler = function(agent){
 }
 //NEURO
 exports.AgendarNeuroHandler = function(agent){
-    agent.add(`Na especialidade de Neurologista, temos o Dr. José Roberto, que atende na ${agendaMedicos.medicos[23].horarios[0]}
+    agent.add(`Na especialidade de Neurologista, temos o Dr. José Roberto, que atende na ${agendaMedicos.medicos[22].horarios[0]}
     Deseja agendar? Responda com o número correspondente a opção desejada.
     1 - Agendar
     2 - Cancelar`)
@@ -447,7 +447,7 @@ exports.AgendarJoseRobertoHandler = function(agent){
 exports.AgendarOrtopedistaHandler = function(agent){
     agent.add(`
     O preço da consulta nessa especialidade é de R$ 125,00 em até 3x no cartão de crédito, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00.
-    Na especialidade de Ortopedista, temos a Dra. Jurema Miguins, que atende na ${agendaMedicos.medicos[24].horarios[0]}.
+    Na especialidade de Ortopedista, temos a Dra. Jurema Miguins, que atende na ${agendaMedicos.medicos[23].horarios[0]}.
     Gostaria de agendar? Responda com o número correspondente a opção desejada.
     1 - Agendar
     2 - Cancelar`)
@@ -472,7 +472,7 @@ exports.AgendarMastoHandler = function(agent){
 exports.AgendarPediHandler = function(agent){
     agent.add(`
     O preço da consulta é R$ 125,00 em até 3x no cartão de crédito, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de R$ 100,00.
-    Na especialidade de Pediatria, temos a Dra. Lucy Anne, que atende na ${agendaMedicos.medicos[25].horarios[0]}. Deseja agendar?
+    Na especialidade de Pediatria, temos a Dra. Lucy Anne, que atende na ${agendaMedicos.medicos[24].horarios[0]}. Deseja agendar?
     Responda com o número correspodente a opção desejada.
     1 - Agendar
     2 - Cancelar`)
