@@ -493,7 +493,6 @@ exports.AgendarLucyHandler = function(agent){
  */
 exports.AgendarExameHandler = function(agent){
     agent.add(
-        corpoEmail.tipoAgendamento = "Agendamento de Procedimento/Exame"
         `
             Certo, você deseja agendar um exame ou procedimento, para prosseguir, por favor, selecione a especialidade médica que realiza o exame que você deseja fazer:\n
             1 - Alergologia
@@ -508,6 +507,7 @@ exports.AgendarExameHandler = function(agent){
             10 - Ultrassonografia
         `
     )
+    corpoEmail.tipoAgendamento = "Agendamento de Procedimento/Exame"
 }
 
 exports.AgendarExameAlergoHandler = function(agent){
