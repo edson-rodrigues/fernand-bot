@@ -528,8 +528,9 @@ exports.AgendarExameAlergoHandler = function(agent){
 
 exports.ImunoterapiaHandler = function(agent){
     agent.add(
-        requerido()
-        `A Imunoterapia está no valor de ${precos.precos[0].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[0].preco[1]}.
+        `
+        ${requerido()}
+        A Imunoterapia está no valor de ${precos.precos[0].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[0].preco[1]}.
         Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
         1 - Sim
         2 - Cancelar
