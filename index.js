@@ -1,7 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const {WebhookClient} = require('dialogflow-fulfillment')
-const handlers = require('./handlers')
+const handlers = require('./handlers/handlers')
 
 const app = express()
 
@@ -121,6 +121,15 @@ const dialogflowFulfillment = (request, response) =>{
     //Pedi
     intentMap.set('17 - Agendar Pedi', handlers.AgendarPediHandler)
     intentMap.set('1 - Agendar Lucy', handlers.AgendarLucyHandler)
+
+    //##########INTENTS PARA EXAMES ###############
+    intentMap.set('2 - Agendar Exame ou Procedimento', handlers.AgendarExameHandler)
+    intentMap.set('1 - Exames Alergo', handlers.AgendarExameAlergoHandler)
+    intentMap.set('1 - Imunoterapia', handlers.ImunoterapiaHandler)
+    intentMap.set('Seleciona Alergo', handlers.SelecionaAlergoHandler)
+
+
+    
     
     agent.handleRequest(intentMap)
 }   

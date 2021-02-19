@@ -1,0 +1,49 @@
+{
+    "precos":[
+        {
+            "id": 0,
+            "nomeExame": "Imunoterapia",
+            "solicitacoMedica": true,
+            "preco": ["R$ 381,00", "R$ 364,00"],
+            "especialidade": "Alergologia"
+        },
+        {
+            "id": 1,
+            "nomeExame": "Teste de Contato 1 Bateria",
+            "solicitacoMedica": true,
+            "preco": ["R$ 463,00", "R$ 340,00"],
+            "especialidade": "Alergologia"
+        },
+        {
+            "id": 2,
+            "nomeExame": "Teste de contato 2 Baterias",
+            "solicitacoMedica": true,
+            "preco": ["R$ 585,00", "R$ 430,00"],
+            "especialidade": "Alergologia"
+        },
+        {
+            "id": 3,
+            "nomeExame": "Teste cutâneo 8 substâncias",
+            "solicitacoMedica": true,
+            "preco": ["R$ 227,00", "R$ 170,00"],
+            "especialidade": "Alergologia"
+        },
+        {
+            "id": 4,
+            "nomeExame": "Teste cutâneo +8 substâncias",
+            "solicitacoMedica": true,
+            "preco": ["R$ 365,00", "R$ 275,00"],
+            "especialidade": "Alergologia"
+        },
+        {
+            "id": 5,
+            "nomeExame": "Teste de provocação",
+            "solicitacoMedica": true,
+            "preco": ["R$ 702,00", "R$ 550,00"],
+            "especialidade": "Alergologia"
+        }
+
+    ]
+}
+
+

@@ -8,9 +8,11 @@ let subject = 'Agendamento Chatbot';
 exports.text = (data) =>{
     return(`
         Solicitação de Agendamento via Whatsapp:\n\n
+        Tipo: ${data.tipoAgendamento}\n
         Nome: ${data.nomePaciente}\n
         Número: ${data.numeroPaciente}\n
         Especialidade: ${data.especialidade}\n
+        ${data.nomeExame ? `Nome do Procedimento: ${data.nomeExame}`: ''}
         Médico: ${data.medico}\n
         Data/Hora: ${data.diaHora}\n\n
         Paciente de primeira vez: ${data.primeiraVez}\n\n

@@ -1,7 +1,10 @@
 const agendaMedicos = require('./agendaMedicos.json')
-const mailer = require('./myMailer')
+const precos = require('./precosExames.json')
+const mailer = require('../myMailer')
 
 const corpoEmail = {}
+
+const requerido = () => "Atenção, para a realização deste procedimento, é necessário uma solicitação médica. Caso você tenha, pode continuar com seu agendamento normalmente, caso não, responda *Cancelar* e agende uma consulta com nossos médicos que podem solicitar esse procedimento\n"
 
 const verificarSePrimeiraVez = () =>{
     return('Para prosseguir com seu agendamento, por favor, nos informe se você já se consultou na \
@@ -46,7 +49,7 @@ exports.AgendarConsultaHandler = function(agent){
     \n16 - Mastologista\
     \n17 - Pediata`
     )
-    corpoEmail.tipoAgendamento = "consulta"
+    corpoEmail.tipoAgendamento = "Agendamento de Consulta"
 }
 
 exports.AgendarClinicoGeralHandler = function(agent){
@@ -127,6 +130,11 @@ exports.ConfirmarAgendamentoHandler = function (agent){
      2 - Cancelar
      ` )
 }
+/*
+ *
+ O CORPO DO EMAIL É MONTADO AQUI 
+ * 
+ */
 exports.FinalizaConversaHandler = function(agent){
     agent.add("Sua solicitação de agendamento foi realizada com sucesso! Em breve estaremos entrando\
     em contato com você para confirmar o agendamento e passar instruções. A Clínica Saúde Belém agradece a sua preferência\
@@ -187,8 +195,6 @@ exports.ConfirmaGastroHandler = function(agent){
     corpoEmail.medico = "Dr. Allan Rodrigues"
     corpoEmail.diaHora = agendaMedicos.medicos[4].horarios[0]     
 }
-
-
 //GINECO
 exports.AgendarGinecoHandler = function(agent){
     agent.add(`
@@ -225,7 +231,6 @@ exports.AgendarTayssaHandler = function(agent){
     corpoEmail.medico = "Dra. Tayssa Guimarães"
     corpoEmail.diaHora = agendaMedicos.medicos[8].horarios[0]
 }
-
 //PNEUMO
 exports.AgendarPneumoHandler = function(agent){
     agent.add(`
@@ -483,5 +488,76 @@ exports.AgendarLucyHandler = function(agent){
     corpoEmail.medico = "Dra. Lucy Anne"
     corpoEmail.diaHora = agendaMedicos.medicos[25].horarios[0]
 }
+/**
+ * INICIO DAS INTENTS PARA EXAMES E PROCEDIMENTOS
+ */
+exports.AgendarExameHandler = function(agent){
+    agent.add(
+        corpoEmail.tipoAgendamento = "Agendamento de Procedimento/Exame"
+        `
+            Certo, você deseja agendar um exame ou procedimento, para prosseguir, por favor, selecione a especialidade médica que realiza o exame que você deseja fazer:\n
+            1 - Alergologia
+            2 - Cardiologia
+            3 - Endocrinologia
+            4 - Gastroentrologia / Proctologia
+            5 - Ginecologia
+            6 - Oftalmologia
+            7 - Otorrinolaringologia
+            8 - Pneumologia
+            9 - Dermatologia
+            10 - Ultrassonografia
+        `
+    )
+}
+
+exports.AgendarExameAlergoHandler = function(agent){
+    agent.add(
+        `Certo, na especialidade de alergologia, oferecemos os seguintes exames:
+            1 - Imunoterapia
+            2 - Teste de contato 1 bateria
+            3 - Teste de contato 2 baterias
+            4 - Teste cutâneo 8 substâncias
+            5 - Teste cutâneo +8 substâncias
+            6 - Teste de Provocação
+
+        Por favor, responda com o número correspondente a opção desejada. Para encerrar o atendimento, digite 0.
+        `
+    )
+    corpoEmail.especialidade = 'alergologia'
+}
+
+exports.ImunoterapiaHandler = function(agent){
+    agent.add(
+        requerido()
+        `A Imunoterapia está no valor de ${precos.precos[0].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[0].preco[1]}.
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar
+        `
+    )
+    corpoEmail.nomeExame = "Imunoterapia"
+}
+exports.SelecionaAlergoHandler = function(agent){
+    agent.add(`
+    Certo, agora vamos selecionar a médica que irá realizar seu exame. Por favor, responda 1 para agendar com a Dra. Bárbara, que atende na ${agendaMedicos.medicos[12].horarios[0]}, ou responda 2 para agendar com a Dra. Carolina, que atende na ${agendaMedicos.medicos[13].horarios[0]}.
+    `)
+    corpoEmail.especialidade = "Alergista/Alergologista"
+}
+
+exports.TesteContato1Handler = function(agent){
+    agent.add(
+        requerido()
+        `O teste de contato 1 bateria está no valor de ${precos.precos[1].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[1].preco[1]}.`
+    )
+}
+exports.TesteContato2Handler = function(agent){
+    agent.add(
+        requerido()
+        `O teste de contato 2 bateria está no valor de ${precos.precos[2].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[2].preco[1]}.`
+    )
+}
+
+
+
 
 
