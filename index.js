@@ -131,7 +131,9 @@ const dialogflowFulfillment = (request, response) =>{
     intentMap.set('1 - Imunoterapia', handlers.ImunoterapiaHandler)
     intentMap.set('2 - Teste de Contato 1 Bateria', handlers.TesteContato1Handler)
     intentMap.set('3 - Teste de Contato 2 Baterias', handlers.TesteContato2Handler)
-
+    intentMap.set('4 - Teste Cutâneo 8 Substâncias', handlers.TesteCutaneo8Handler)
+    intentMap.set('5 - Teste Cutâneo + 8 Substâncias', handlers.TesteCutaneoMais8Handler)
+    intentMap.set('6 - Teste de Provocação', handlers.TesteProvocacaoHandler)
 
     intentMap.set('Seleciona Alergo', handlers.SelecionaAlergoHandler)
 

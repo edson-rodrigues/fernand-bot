@@ -550,7 +550,10 @@ exports.TesteContato1Handler = function(agent){
     agent.add(
         `
         ${requerido()}
-        O teste de contato 1 bateria está no valor de ${precos.precos[1].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[1].preco[1]}.`
+        O teste de contato 1 bateria está no valor de ${precos.precos[1].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[1].preco[1]}.
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar`
     )
     corpoEmail.nomeExame = "Teste de Contato 1 Bateria"
 }
@@ -558,12 +561,50 @@ exports.TesteContato2Handler = function(agent){
     agent.add(
         `
         ${requerido()}
-        O teste de contato 2 bateria está no valor de ${precos.precos[2].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[2].preco[1]}.`
+        O teste de contato 2 bateria está no valor de ${precos.precos[2].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[2].preco[1]}.
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar`
     )
     corpoEmail.nomeExame = "Teste de Contato 2 Baterias"
 }
+exports.TesteCutaneo8Handler = function(agent){
+    agent.add(
+        `
+        ${requerido()}
+        O teste cutâneo com 8 substâncisas, está no valor de ${precos.precos[3].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[3].preco[1]}.
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar
+        `
+    )
+    corpoEmail.nomeExame = "Teste Cutâneo 8 Substâncias"
+}
+exports.TesteCutaneoMais8Handler = function(agent){
+    agent.add(
+        `
+        ${requerido()}
+        O teste cutâneo com +8 substâncisas, está no valor de ${precos.precos[4].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[4].preco[1]}.
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar
+        `
+    )
+    corpoEmail.nomeExame = "Teste Cutâneo +8 Substâncias"
+}
 
-
+exports.TesteProvocacaoHandler = function(agent){
+    agent.add(
+        `
+        ${requerido()}
+        O Teste de Provocação, está no valor de ${precos.precos[5].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[5].preco[1]}.
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar
+        `
+    )
+    corpoEmail.nomeExame = "Teste de Provocação"
+}
 
 
 
