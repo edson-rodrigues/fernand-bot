@@ -12,7 +12,7 @@ exports.text = (data) =>{
         Nome: ${data.nomePaciente}\n
         Número: ${data.numeroPaciente}\n
         Especialidade: ${data.especialidade}\n
-        ${data.nomeExame ? `Nome do Procedimento: ${data.nomeExame}`: ''}
+        ${data.nomeExame ? `Nome do Procedimento: ${data.nomeExame}'\n`: '\n'}
         Médico: ${data.medico}\n
         Data/Hora: ${data.diaHora}\n\n
         Paciente de primeira vez: ${data.primeiraVez}\n\n
