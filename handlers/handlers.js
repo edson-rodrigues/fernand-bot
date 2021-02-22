@@ -548,15 +548,17 @@ exports.ImunoterapiaHandler = function(agent){
 
 exports.TesteContato1Handler = function(agent){
     agent.add(
-        requerido()
-        `O teste de contato 1 bateria está no valor de ${precos.precos[1].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[1].preco[1]}.`
+        `
+        ${requerido()}
+        O teste de contato 1 bateria está no valor de ${precos.precos[1].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[1].preco[1]}.`
     )
     corpoEmail.nomeExame = "Teste de Contato 1 Bateria"
 }
 exports.TesteContato2Handler = function(agent){
     agent.add(
-        requerido()
-        `O teste de contato 2 bateria está no valor de ${precos.precos[2].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[2].preco[1]}.`
+        `
+        ${requerido()}
+        O teste de contato 2 bateria está no valor de ${precos.precos[2].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[2].preco[1]}.`
     )
     corpoEmail.nomeExame = "Teste de Contato 2 Baterias"
 }
