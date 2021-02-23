@@ -510,6 +510,7 @@ exports.AgendarExameHandler = function(agent){
     corpoEmail.tipoAgendamento = "Agendamento de Procedimento/Exame"
 }
 
+//EXAMES ALERGO
 exports.AgendarExameAlergoHandler = function(agent){
     agent.add(
         `Certo, na especialidade de alergologia, oferecemos os seguintes exames:
@@ -518,40 +519,37 @@ exports.AgendarExameAlergoHandler = function(agent){
             3 - Teste de contato 2 baterias
             4 - Teste cutâneo 8 substâncias
             5 - Teste cutâneo +8 substâncias
-            6 - Teste de Provocação
+            6 - Teste de Provocação\n
 
         Por favor, responda com o número correspondente a opção desejada. Para encerrar o atendimento, digite 0.
         `
     )
     corpoEmail.especialidade = 'alergologia'
 }
-
 exports.SelecionaAlergoHandler = function(agent){
     agent.add(`
     Certo, agora vamos selecionar a médica que irá realizar seu exame. Por favor, responda 1 para agendar com a Dra. Bárbara, que atende na ${agendaMedicos.medicos[12].horarios[0]}, ou responda 2 para agendar com a Dra. Carolina, que atende na ${agendaMedicos.medicos[13].horarios[0]}.
     `)
     corpoEmail.especialidade = "Alergista/Alergologista"
 }
-
 exports.ImunoterapiaHandler = function(agent){
     agent.add(
         `
         ${requerido()}
         A Imunoterapia está no valor de ${precos.precos[0].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[0].preco[1]}.
-        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        \nDeseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
         1 - Sim
         2 - Cancelar
         `
     )
     corpoEmail.nomeExame = "Imunoterapia"
 }
-
 exports.TesteContato1Handler = function(agent){
     agent.add(
         `
         ${requerido()}
         O teste de contato 1 bateria está no valor de ${precos.precos[1].preco[0]} no cartão em de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[1].preco[1]}.
-        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        \nDeseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
         1 - Sim
         2 - Cancelar`
     )
@@ -563,7 +561,7 @@ exports.TesteContato2Handler = function(agent){
         ${requerido()}
         O teste de contato 2 bateria está no valor de ${precos.precos[2].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[2].preco[1]}.
         Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
-        1 - Sim
+        \n1 - Sim
         2 - Cancelar`
     )
     corpoEmail.nomeExame = "Teste de Contato 2 Baterias"
@@ -574,7 +572,7 @@ exports.TesteCutaneo8Handler = function(agent){
         ${requerido()}
         O teste cutâneo com 8 substâncisas, está no valor de ${precos.precos[3].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[3].preco[1]}.
         Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
-        1 - Sim
+        \n1 - Sim
         2 - Cancelar
         `
     )
@@ -586,13 +584,12 @@ exports.TesteCutaneoMais8Handler = function(agent){
         ${requerido()}
         O teste cutâneo com +8 substâncisas, está no valor de ${precos.precos[4].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[4].preco[1]}.
         Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
-        1 - Sim
+        \n1 - Sim
         2 - Cancelar
         `
     )
     corpoEmail.nomeExame = "Teste Cutâneo +8 Substâncias"
 }
-
 exports.TesteProvocacaoHandler = function(agent){
     agent.add(
         `
@@ -605,6 +602,88 @@ exports.TesteProvocacaoHandler = function(agent){
     )
     corpoEmail.nomeExame = "Teste de Provocação"
 }
+//EXAMES CARDIO
+exports.AgendarExameCardioHandler = function(agent){
+    agent.add(
+        `Certo, na especialidade de Cardiologia, oferecemos os seguintes exames:
+            1 - Ecocardiograma Adulto
+            2 - Ecocardiograma Fetal
+            3 - Eletrocardiograma
+            4 - Holter
+            5 - Mapa
+            6 - Teste Ergométrico\n
+
+        Por favor, responda com o número correspondente a opção desejada. Para encerrar o atendimento, digite 0.
+        `
+    )
+    corpoEmail.especialidade = 'Cardiologia'
+}
+
+exports.AgendarEcoAdultoHandler = function(agent){
+    agent.add(`
+        O preço do Ecocardiograma Adulto é ${precos.precos[6].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[6].preco[1]}
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar
+        `
+    )
+    corpoEmail.nomeExame = 'Eco Adulto'
+}
+
+exports.AgendarEcoFetalHandler = function(agent){
+    agent.add(`
+        O preço do Ecocardiograma Fetal é ${precos.precos[7].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[7].preco[1]}
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar
+        `
+    )
+    corpoEmail.nomeExame = 'Eco Fetal'
+}
+exports.AgendarEletroHandler = function(agent){
+    agent.add(`
+        O preço do Eletrocardiograma é ${precos.precos[8].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[8].preco[1]}
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar
+        `
+    )
+    corpoEmail.nomeExame = 'Eletrocardiograma'
+}
+exports.AgendarHolterHandler = function(agent){
+    agent.add(`
+        O preço do Holter é ${precos.precos[9].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[9].preco[1]}
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar
+        `
+    )
+    corpoEmail.nomeExame = 'Holter'
+}
+exports.AgendarMapaHandler = function(agent){
+    agent.add(`
+        O preço do Mapa é ${precos.precos[10].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[10].preco[1]}
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar
+        `
+    )
+    corpoEmail.nomeExame = 'Mapa'
+}
+exports.AgendarTEHandler = function(agent){
+    agent.add(`
+        O preço do Teste Ergométrico é ${precos.precos[11].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[11].preco[1]}
+        Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
+        1 - Sim
+        2 - Cancelar
+        `
+    )
+    corpoEmail.nomeExame = 'Teste Ergométrico'
+}
+
+
+
+
 
 
 

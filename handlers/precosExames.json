@@ -41,7 +41,56 @@
             "solicitacoMedica": true,
             "preco": ["R$ 702,00", "R$ 550,00"],
             "especialidade": "Alergologia"
-        }
+        },
+        {
+            "id": 6,
+            "nomeExame": "Ecocardiograma Adulto",
+            "solicitacoMedica": true,
+            "preco": ["R$ 205,00", "R$ 150,00"],
+            "especialidade": "Cardiologia"
+        },
+        {
+            "id": 7,
+            "nomeExame": "Ecocardiograma Fetal",
+            "solicitacoMedica": true,
+            "preco": ["R$ 370,00", "R$ 320,00"],
+            "especialidade": "Cardiologia"
+        },
+        {
+            "id": 8,
+            "nomeExame": "Eletrocardiograma",
+            "solicitacoMedica": false,
+            "preco": ["R$ 80,00", "R$ 60,00"],
+            "especialidade": "Cardiologia"
+        },
+        {
+            "id": 9,
+            "nomeExame": "Holter",
+            "solicitacoMedica": false,
+            "preco": ["R$ 205,00", "R$ 150,00"],
+            "especialidade": "Cardiologia"
+        },
+        {
+            "id": 10,
+            "nomeExame": "Mapa",
+            "solicitacoMedica": false,
+            "preco": ["R$ 205,00", "R$ 150,00"],
+            "especialidade": "Cardiologia"
+        },
+        {
+            "id": 11,
+            "nomeExame": "Teste Ergométrico",
+            "solicitacoMedica": false,
+            "preco": ["R$ 177,00", "R$ 130,00"],
+            "especialidade": "Cardiologia"
+        },
+        {
+            "id": 12,
+            "nomeExame": "Teste Ergométrico",
+            "solicitacoMedica": false,
+            "preco": ["R$ 177,00", "R$ 130,00"],
+            "especialidade": "Cardiologia"
+        }        
 
     ]
 }

@@ -130,6 +130,15 @@
             "id": 25,
             "medico":"Dra. Lucy Anne",
             "horarios":["Segunda-Feira a partir das 15:30h"]
+        },
+        {
+            "id": 26,
+            "medico": "Técnico de Enfermagem",
+            "horarios":[]
+        },
+        {
+            "id": 27,
+            "medico": ""
         }
 
     ]
