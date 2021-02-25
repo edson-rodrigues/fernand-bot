@@ -494,17 +494,7 @@ exports.AgendarLucyHandler = function(agent){
 exports.AgendarExameHandler = function(agent){
     agent.add(
         `
-            Certo, você deseja agendar um exame ou procedimento, para prosseguir, por favor, selecione a especialidade médica que realiza o exame que você deseja fazer:\n
-            1 - Alergologia
-            2 - Cardiologia
-            3 - Endocrinologia
-            4 - Gastroentrologia / Proctologia
-            5 - Ginecologia
-            6 - Oftalmologia
-            7 - Otorrinolaringologia
-            8 - Pneumologia
-            9 - Dermatologia
-            10 - Ultrassonografia
+        Por favor, responda com o nome do exame que você deseja agendar. (Não use abreviações)
         `
     )
     corpoEmail.tipoAgendamento = "Agendamento de Procedimento/Exame"
@@ -680,7 +670,6 @@ exports.AgendarTEHandler = function(agent){
     )
     corpoEmail.nomeExame = 'Teste Ergométrico'
 }
-
 
 
 

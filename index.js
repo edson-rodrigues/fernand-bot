@@ -125,6 +125,8 @@ const dialogflowFulfillment = (request, response) =>{
     //##########INTENTS PARA EXAMES ###############
 
     intentMap.set('2 - Agendar Exame ou Procedimento', handlers.AgendarExameHandler)
+
+    intentMap.set('Pergunta Nome Exame', handlers.PerguntaNomeExameHandler)
     
     //EXAMES ALERGO
     intentMap.set('1 - Exames Alergo', handlers.AgendarExameAlergoHandler)
@@ -145,6 +147,10 @@ const dialogflowFulfillment = (request, response) =>{
     intentMap.set('4 - Agendar Holter', handlers.AgendarHolterHandler)
     intentMap.set('5 - Agendar Mapa', handlers.AgendarMapaHandler)
     intentMap.set('6 - Agendar TE', handlers.AgendarTEHandler)
+
+    //EXAMES ENDOCRINO
+    intentMap.set('3 - Exames Endocrino')
+
 
     
     

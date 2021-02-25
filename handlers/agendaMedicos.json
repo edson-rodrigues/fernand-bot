@@ -138,7 +138,13 @@
         },
         {
             "id": 27,
-            "medico": ""
+            "medico": "Aline Carla",
+            "horarios":["Quarta-Feira a partir das 8h"]
+        },
+        {
+            "id": 28,
+            "medico": "Dr. Simon Camilo",
+            "horarios":["Sábado à partir das 8h"]
         }
 
     ]
