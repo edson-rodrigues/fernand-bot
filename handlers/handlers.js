@@ -572,6 +572,15 @@ exports.TesteCutaneoMais8Handler = function(agent){
     )
     corpoEmail.nomeExame = "Teste Cutâneo +8 Substâncias"
 }
+
+exports.TesteCutaneoHandler = function(agent){
+    agent.add(
+        `
+        Certo, nós realizamos o Teste Cutâneo (Prick Test) com 8 ou 16 substâncias. Responda 1 para selecionar 8 substâncias, ou 2 para selecionar 16.
+        `
+    )
+}
+
 exports.TesteProvocacaoHandler = function(agent){
     agent.add(
         `
