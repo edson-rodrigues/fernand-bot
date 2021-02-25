@@ -501,21 +501,6 @@ exports.AgendarExameHandler = function(agent){
 }
 
 //EXAMES ALERGO
-exports.AgendarExameAlergoHandler = function(agent){
-    agent.add(
-        `Certo, na especialidade de alergologia, oferecemos os seguintes exames:
-            1 - Imunoterapia
-            2 - Teste de contato 1 bateria
-            3 - Teste de contato 2 baterias
-            4 - Teste cutâneo 8 substâncias
-            5 - Teste cutâneo +8 substâncias
-            6 - Teste de Provocação\n
-
-        Por favor, responda com o número correspondente a opção desejada. Para encerrar o atendimento, digite 0.
-        `
-    )
-    corpoEmail.especialidade = 'alergologia'
-}
 exports.SelecionaAlergoHandler = function(agent){
     agent.add(`
     Certo, agora vamos selecionar a médica que irá realizar seu exame. Por favor, responda 1 para agendar com a Dra. Bárbara, que atende na ${agendaMedicos.medicos[12].horarios[0]}, ou responda 2 para agendar com a Dra. Carolina, que atende na ${agendaMedicos.medicos[13].horarios[0]}.
@@ -534,6 +519,13 @@ exports.ImunoterapiaHandler = function(agent){
     )
     corpoEmail.nomeExame = "Imunoterapia"
 }
+
+exports.TipoTesteContatoHandler = function(agent){
+    agent.add(`
+        Certo, nós fazemos o Teste de Contato (Patch Test, Teste Epicutâneo) com uma bateria (30 substâncias) ou duas baterias (30 substâncias + cosméticos). Responda 1 para Uma bateria, ou o 2 para Duas baterias.  
+    `)
+}
+
 exports.TesteContato1Handler = function(agent){
     agent.add(
         `

@@ -134,7 +134,7 @@
         {
             "id": 26,
             "medico": "Técnico de Enfermagem",
-            "horarios":[]
+            "horarios":["Segunda de Manhã", "Terça de Manhã", "Quarta de tarde00s"]
         },
         {
             "id": 27,
