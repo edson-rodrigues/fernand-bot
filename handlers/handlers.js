@@ -564,7 +564,7 @@ exports.TesteCutaneoMais8Handler = function(agent){
     agent.add(
         `
         ${requerido()}
-        O teste cutâneo com +8 substâncisas, está no valor de ${precos.precos[4].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[4].preco[1]}.
+        O teste cutâneo com +8 substâncias, está no valor de ${precos.precos[4].preco[0]} no cartão de crédito em até 3x, ou débito. Para pagamento em dinheiro, há desconto, ficando no valor de ${precos.precos[4].preco[1]}.
         Deseja prosseguir com seu agendamento? Responda com o número correspondente a opção desejada.
         \n1 - Sim
         2 - Cancelar

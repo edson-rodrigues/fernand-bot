@@ -152,7 +152,7 @@ const dialogflowFulfillment = (request, response) =>{
 
     //EXAMES ENDOCRINO
     intentMap.set('3 - Exames Endocrino')
-
+    
 
     
     
